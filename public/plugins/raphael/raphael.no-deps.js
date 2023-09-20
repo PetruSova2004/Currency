@@ -6556,13 +6556,13 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
      o font-size (number) font size in pixels
      o font-weight (string)
      o height (number)
-     o href (string) URL, if specified element behaves as hyperlink
+     o href (string) Main, if specified element behaves as hyperlink
      o opacity (number)
      o path (string) SVG path string format
      o r (number) radius of the circle, ellipse or rounded corner on the rect
      o rx (number) horisontal radius of the ellipse
      o ry (number) vertical radius of the ellipse
-     o src (string) image URL, only works for @Element.image element
+     o src (string) image Main, only works for @Element.image element
      o stroke (string) stroke colour
      o stroke-dasharray (string) [“”, “none”, “`-`”, “`.`”, “`-.`”, “`-..`”, “`. `”, “`- `”, “`--`”, “`- .`”, “`--.`”, “`--..`”]
      o stroke-linecap (string) [“`butt`”, “`square`”, “`round`”]

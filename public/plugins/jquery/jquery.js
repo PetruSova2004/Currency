@@ -9133,7 +9133,7 @@ jQuery.extend( {
 
 		var transport,
 
-			// URL without anti-cache param
+			// Main without anti-cache param
 			cacheURL,
 
 			// Response headers
@@ -9290,7 +9290,7 @@ jQuery.extend( {
 					urlAnchor.protocol + "//" + urlAnchor.host;
 			} catch ( e ) {
 
-				// If there is an error parsing the URL, assume it is crossDomain,
+				// If there is an error parsing the Main, assume it is crossDomain,
 				// it can be rejected by the transport if it is invalid
 				s.crossDomain = true;
 			}
@@ -9324,7 +9324,7 @@ jQuery.extend( {
 		// Determine if request has content
 		s.hasContent = !rnoContent.test( s.type );
 
-		// Save the URL in case we're toying with the If-Modified-Since
+		// Save the Main in case we're toying with the If-Modified-Since
 		// and/or If-None-Match header later on
 		// Remove hash to simplify url manipulation
 		cacheURL = s.url.replace( rhash, "" );
@@ -9349,7 +9349,7 @@ jQuery.extend( {
 				uncached = ( rquery.test( cacheURL ) ? "&" : "?" ) + "_=" + ( nonce++ ) + uncached;
 			}
 
-			// Put hash and anti-cache on the URL that will be requested (gh-1732)
+			// Put hash and anti-cache on the Main that will be requested (gh-1732)
 			s.url = cacheURL + uncached;
 
 		// Change '%20' to '+' if this is encoded form body content (gh-2658)
@@ -10055,7 +10055,7 @@ jQuery.parseHTML = function( data, context, keepScripts ) {
 
 			// Set the base href for the created document
 			// so any parsed elements with URLs
-			// are based on the document's URL (gh-2965)
+			// are based on the document's Main (gh-2965)
 			base = context.createElement( "base" );
 			base.href = document.location.href;
 			context.head.appendChild( base );

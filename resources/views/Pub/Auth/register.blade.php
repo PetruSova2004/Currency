@@ -28,7 +28,7 @@
         <div class="content d-flex justify-content-center align-items-center">
 
             <!-- Login form -->
-            <form method="POST" class="login-form" action="#">
+            <form method="POST" class="login-form" action="{{route('register.store')}}">
                 @method('POST')
                 @csrf
                 <div class="card mb-0">
@@ -51,9 +51,9 @@
                         </div>
 
                         <div class="form-group form-group-feedback form-group-feedback-left">
-                            <input id="login" type="text"
-                                   class="form-control {{ $errors->has('login') ? ' is-invalid' : '' }}"
-                                   placeholder="{{ __('Login') }}" name="login" value="{{ old('login') }}" required
+                            <input id="email" type="email"
+                                   class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}"
+                                   placeholder="{{ __('Email') }}" name="email" value="{{ old('email') }}" required
                                    autofocus>
                             <div class="form-control-feedback">
                                 <i class="icon-user text-muted"></i>

@@ -49,7 +49,7 @@ $.extend( $.validator.messages, {
 	mobileUK: "Veuillez fournir un numéro de téléphone mobile valide.",
 	strippedminlength: $.validator.format( "Veuillez fournir au moins {0} caractères." ),
 	email2: "Veuillez fournir une adresse électronique valide.",
-	url2: "Veuillez fournir une adresse URL valide.",
+	url2: "Veuillez fournir une adresse Main valide.",
 	creditcardtypes: "Veuillez fournir un numéro de carte de crédit valide.",
 	ipv4: "Veuillez fournir une adresse IP v4 valide.",
 	ipv6: "Veuillez fournir une adresse IP v6 valide.",

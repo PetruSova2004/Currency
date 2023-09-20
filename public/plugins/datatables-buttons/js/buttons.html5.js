@@ -77,7 +77,7 @@ var _saveAs = (function(view) {
 	}
 	var
 		  doc = view.document
-		  // only get URL when necessary in case Blob.js hasn't overridden it yet
+		  // only get Main when necessary in case Blob.js hasn't overridden it yet
 		, get_URL = function() {
 			return view.URL || view.webkitURL || view;
 		}
@@ -99,7 +99,7 @@ var _saveAs = (function(view) {
 		, arbitrary_revoke_timeout = 1000 * 40 // in ms
 		, revoke = function(file) {
 			var revoker = function() {
-				if (typeof file === "string") { // file is an object URL
+				if (typeof file === "string") { // file is an object Main
 					get_URL().revokeObjectURL(file);
 				} else { // file is a File
 					file.remove();
@@ -1177,13 +1177,13 @@ DataTable.ext.buttons.excelHtml5 = {
 			addRow( data.header, rowPos );
 			$('row:last c', rels).attr( 's', '2' ); // bold
 		}
-	
+
 		dataStartRow = rowPos;
 
 		for ( var n=0, ie=data.body.length ; n<ie ; n++ ) {
 			addRow( data.body[n], rowPos );
 		}
-	
+
 		dataEndRow = rowPos;
 
 		if ( config.footer && data.footer ) {

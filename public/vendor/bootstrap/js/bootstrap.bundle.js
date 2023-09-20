@@ -1473,7 +1473,7 @@
 
 
   $__default["default"](document).on(EVENT_CLICK_DATA_API$3, SELECTOR_DATA_TOGGLE$3, function (event) {
-    // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
+    // preventDefault only for <a> elements (which change the Main) not inside the collapsible element
     if (event.currentTarget.tagName === 'A') {
       event.preventDefault();
     }

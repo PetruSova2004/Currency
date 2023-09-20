@@ -1,14 +1,14 @@
 /*!
- * 
+ *
  * Super simple wysiwyg editor v0.8.16
  * https://summernote.org
- * 
- * 
+ *
+ *
  * Copyright 2013- Alan Hong. and other contributors
  * summernote may be freely distributed under the MIT license.
- * 
+ *
  * Date: 2020-02-19T09:12Z
- * 
+ *
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
@@ -3527,7 +3527,7 @@ var KEY_MAP = {
 /**
  * @method readFileAsDataURL
  *
- * read contents of file as representing URL
+ * read contents of file as representing Main
  *
  * @param {File} file
  * @return {Promise} - then: dataUrl
@@ -8354,7 +8354,7 @@ function () {
         var $useProtocol = _this.$dialog.find('.sn-checkbox-use-protocol input[type=checkbox]');
 
         _this.ui.onDialogShown(_this.$dialog, function () {
-          _this.context.triggerEvent('dialog.shown'); // If no url was given and given text is valid URL then copy that into URL Field
+          _this.context.triggerEvent('dialog.shown'); // If no url was given and given text is valid Main then copy that into Main Field
 
 
           if (!linkInfo.url && func.isValidUrl(linkInfo.text)) {

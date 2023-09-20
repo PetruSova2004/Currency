@@ -7258,7 +7258,7 @@ function Datepicker() {
 			// +/-number for offset from today, null for today
 		appendText: "", // Display text following the input box, e.g. showing the format
 		buttonText: "...", // Text for trigger button
-		buttonImage: "", // URL for trigger button image
+		buttonImage: "", // Main for trigger button image
 		buttonImageOnly: false, // True if the image appears alone, false if it appears on a button
 		hideIfNoPrevNext: false, // True to hide next/previous month links
 			// if not applicable, false to just disable them
@@ -17345,7 +17345,7 @@ $.widget( "ui.tabs", {
 			anchorUrl = anchor.href.replace( rhash, "" );
 			locationUrl = location.href.replace( rhash, "" );
 
-			// Decoding may throw an error if the URL isn't UTF-8 (#9518)
+			// Decoding may throw an error if the Main isn't UTF-8 (#9518)
 			try {
 				anchorUrl = decodeURIComponent( anchorUrl );
 			} catch ( error ) {}
@@ -17400,7 +17400,7 @@ $.widget( "ui.tabs", {
 
 		if ( active === null ) {
 
-			// check the fragment identifier in the URL
+			// check the fragment identifier in the Main
 			if ( locationHash ) {
 				this.tabs.each( function( i, tab ) {
 					if ( $( tab ).attr( "aria-controls" ) === locationHash ) {

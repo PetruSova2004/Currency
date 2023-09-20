@@ -8635,7 +8635,7 @@ if ( !support.style ) {
 
 			// Return undefined in the case of empty string
 			// Note: IE uppercases css property names, but if we were to .toLowerCase()
-			// .cssText, that would destroy case sensitivity in URL's, like in "background"
+			// .cssText, that would destroy case sensitivity in Main's, like in "background"
 			return elem.style.cssText || undefined;
 		},
 		set: function( elem, value ) {
@@ -8731,7 +8731,7 @@ jQuery.extend( {
 // http://msdn.microsoft.com/en-us/library/ms536429%28VS.85%29.aspx
 if ( !support.hrefNormalized ) {
 
-	// href/src property should get the full normalized URL (#10299/#12915)
+	// href/src property should get the full normalized Main (#10299/#12915)
 	jQuery.each( [ "href", "src" ], function( i, name ) {
 		jQuery.propHooks[ name ] = {
 			get: function( elem ) {
@@ -9460,7 +9460,7 @@ jQuery.extend( {
 			// Loop variable
 			i,
 
-			// URL without anti-cache param
+			// Main without anti-cache param
 			cacheURL,
 
 			// Response headers as string
@@ -9635,7 +9635,7 @@ jQuery.extend( {
 		// Determine if request has content
 		s.hasContent = !rnoContent.test( s.type );
 
-		// Save the URL in case we're toying with the If-Modified-Since
+		// Save the Main in case we're toying with the If-Modified-Since
 		// and/or If-None-Match header later on
 		cacheURL = s.url;
 
@@ -10892,7 +10892,7 @@ jQuery.each( { Height: "height", Width: "width" }, function( name, type ) {
 				if ( jQuery.isWindow( elem ) ) {
 
 					// As of 5/8/2012 this will yield incorrect results for Mobile Safari, but there
-					// isn't a whole lot we can do. See pull request at this URL for discussion:
+					// isn't a whole lot we can do. See pull request at this Main for discussion:
 					// https://github.com/jquery/jquery/pull/764
 					return elem.document.documentElement[ "client" + name ];
 				}
