@@ -12,11 +12,21 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/test', 'App\Http\Controllers\TestController@test')->name('test');
+
+
 Route::get('/', 'App\Http\Controllers\Pub\Index\IndexController@index')->name('home');
+
+Route::get('/test', 'App\Http\Controllers\TestController@test')->name('test');
+Route::get('/test2', 'App\Http\Controllers\TestController@test2')->name('test2');
+
+
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/logout', 'App\Http\Controllers\Pub\Auth\LogoutController@logout')->name('logout');
+
+    Route::get('/currency', 'App\Http\Controllers\Pub\Currency\CurrencyController@index')->name('currency.index');
+    Route::post('/currencyExchange', 'App\Http\Controllers\Pub\Currency\CurrencyController@exchange')->name('currency.exchange');
+
 });
 
 Route::group(['middleware' => 'guest'], function () {

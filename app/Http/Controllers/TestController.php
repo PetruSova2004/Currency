@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Http\ResponseTrait;
 
 class TestController extends Controller
 {
+    use ResponseTrait;
     public function test()
     {
-        dd(Auth::user());
+        return response()->redirectToRoute('currency.index', ['yes' => 'zbs']);
     }
 
     public function test2()
