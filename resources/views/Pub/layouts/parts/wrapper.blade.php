@@ -29,5 +29,6 @@
             @endguest
         </div>
     </div>
+    @include('layouts.alerts')
 </div>
 

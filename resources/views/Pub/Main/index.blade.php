@@ -12,15 +12,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <div class="card">
-
-                            <div id="usersTable"></div>
-                            <div class="card-body table-responsive p-0 usersTable">
-
-                            </div>
-                            <!-- /.card-body -->
-                        </div>
-                        <!-- /.card -->
+                        <h3>Home page</h3>
                     </div>
                 </div>
             </div>

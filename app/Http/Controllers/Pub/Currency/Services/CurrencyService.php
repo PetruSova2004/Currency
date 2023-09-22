@@ -13,7 +13,7 @@ class CurrencyService extends Controller
     {
         $client = new Client();
         $data = [
-            'apikey' => "cur_live_p9sCimGdtsgxzWYHN1hVTEzLqUrjvGHMgSynvqXK",
+            'apikey' => env('CURRENCY_API_KEY'),
             'currencies' => $request->input('to_currency'),
             'base_currency' => $request->input('from_currency'),
         ];

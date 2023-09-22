@@ -170,6 +170,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         \Torann\Currency\CurrencyServiceProvider::class,
+        \Maatwebsite\Excel\ExcelServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -184,7 +185,8 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        "Currency" => \Torann\Currency\CurrencyServiceProvider::class
+        "Currency" => \Torann\Currency\CurrencyServiceProvider::class,
+        'Excel' => \Maatwebsite\Excel\ExcelServiceProvider::class,
     ])->toArray(),
 
 ];

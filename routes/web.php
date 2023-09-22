@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Pub\Post\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,17 +17,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\Pub\Index\IndexController@index')->name('home');
 
-Route::get('/test', 'App\Http\Controllers\TestController@test')->name('test');
-Route::get('/test2', 'App\Http\Controllers\TestController@test2')->name('test2');
-
-
-
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/logout', 'App\Http\Controllers\Pub\Auth\LogoutController@logout')->name('logout');
 
     Route::get('/currency', 'App\Http\Controllers\Pub\Currency\CurrencyController@index')->name('currency.index');
     Route::post('/currencyExchange', 'App\Http\Controllers\Pub\Currency\CurrencyController@exchange')->name('currency.exchange');
 
+    Route::resource('post', PostController::class);
+    Route::get('/importPost', 'App\Http\Controllers\Pub\Post\PostController@import')->name('post.import');
 });
 
 Route::group(['middleware' => 'guest'], function () {
