@@ -14,17 +14,20 @@ use App\Http\Controllers\Pub\Post\PostController;
 |
 */
 
+Route::get('/test', 'App\Http\Controllers\Test@index')->name('test');
+Route::post('/testLogin', 'App\Http\Controllers\Test@login')->name('test.login');
 
-Route::get('/', 'App\Http\Controllers\Pub\Index\IndexController@index')->name('home');
 
-Route::group(['middleware' => 'auth'], function () {
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/', 'App\Http\Controllers\Pub\Index\IndexController@index')->name('home');
+
     Route::get('/logout', 'App\Http\Controllers\Pub\Auth\LogoutController@logout')->name('logout');
 
     Route::get('/currency', 'App\Http\Controllers\Pub\Currency\CurrencyController@index')->name('currency.index');
     Route::post('/currencyExchange', 'App\Http\Controllers\Pub\Currency\CurrencyController@exchange')->name('currency.exchange');
 
     Route::resource('post', PostController::class);
-    Route::get('/importPost', 'App\Http\Controllers\Pub\Post\PostController@import')->name('post.import');
 });
 
 Route::group(['middleware' => 'guest'], function () {

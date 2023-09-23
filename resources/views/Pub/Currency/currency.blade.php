@@ -9,6 +9,7 @@
         @include('Pub.layouts.parts.wrapper')
 
         <section class="content">
+            @include('layouts.alerts')
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">

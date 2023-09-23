@@ -18,7 +18,7 @@
                                     @csrf
                                     @method('POST')
                                     <input type="file" name="file" id="fileInput">
-                                    <input type="submit" class="btn btn-primary mb-3" value="Import Post" disabled>
+                                    <input type="submit" class="btn btn-primary mb-3" value="Import Excel-Post" disabled>
                                 </form>
                                 <div id="validationMessage" class="text-danger">
                                     The first column of the file should be "title", and the second - "description", otherwise the import will not complete.

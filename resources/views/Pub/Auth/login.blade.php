@@ -21,12 +21,13 @@
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="page-content">
 
-    @include('layouts.alerts')
 
     <!-- Content Wrapper. Contains page content -->
     <div class="wrapper">
+        @include('layouts.alerts')
+
         <div class="content d-flex justify-content-center align-items-center">
-            <!-- Login form -->
+
             <form method="POST" class="login-form" action="{{route('login.store')}}">
                 @method('POST')
                 @csrf

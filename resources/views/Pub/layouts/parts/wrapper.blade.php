@@ -9,7 +9,7 @@
                         ->first();
                     @endphp
                     <h1 class="m-0">Name: {{$user->name}}</h1>
-                </div><!-- /.col -->
+                </div>
 
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">

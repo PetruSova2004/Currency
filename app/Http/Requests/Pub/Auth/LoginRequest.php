@@ -3,7 +3,9 @@
 namespace App\Http\Requests\Pub\Auth;
 
 use Illuminate\Contracts\Validation\ValidationRule;
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Session;
 
 class LoginRequest extends FormRequest
 {
@@ -39,4 +41,5 @@ class LoginRequest extends FormRequest
                 ],
         ];
     }
+
 }
