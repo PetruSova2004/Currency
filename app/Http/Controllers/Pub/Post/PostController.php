@@ -32,7 +32,7 @@ class PostController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'file' => 'required|file|max:2500',
+            'file' => 'required|file|max:2500|mimes:xlsx,csv',
         ]);
         $file = $request->file('file');
         Excel::import(new PostImport(Auth::user()->getAuthIdentifier()),$file);
