@@ -29,7 +29,7 @@ class RegisterController extends Controller
         try {
             $request->validated();
             $user = $this->service->registerUser($request);
-            return redirect()->route('home')->with('success', "Welcome back " . $user->name);
+            return redirect()->route('home')->with('success', "Welcome " . $user->name);
         } catch (Exception $exception) {
             return redirect()->back()->with('error', $exception->getMessage());
         }

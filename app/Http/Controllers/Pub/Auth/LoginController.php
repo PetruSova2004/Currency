@@ -29,7 +29,7 @@ class LoginController extends Controller
     {
         $request->validated();
         $this->service->login($request);
-        return redirect()->route('home');
+        return redirect()->route('home')->with('success', 'You have successfully log in');
     }
 
 }

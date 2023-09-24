@@ -41,8 +41,8 @@ class CurrencyController extends Controller
                 'amount' => $amount,
                 'value' => $value,
             ]);
-        } catch (Exception) {
-            return redirect()->back();
+        } catch (Exception $exception) {
+            return redirect()->back()->with('error', $exception->getMessage());
         }
 
     }

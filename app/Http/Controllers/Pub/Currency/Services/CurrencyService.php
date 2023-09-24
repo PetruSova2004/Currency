@@ -30,6 +30,6 @@ class CurrencyService extends Controller
         $value_x1 = $receive['data'][$data['currencies']]['value'];
 
         $total = $value_x1 * $amount;
-        return number_format($total, 2, '.', ''); // Округление до двух знаков после точки
+        return number_format($total, 2, '.', ''); // Rounding to two digits after the point
     }
 }
